@@ -31,6 +31,7 @@
       "image": "https://api.badgr.io/public/assertions/e7fb016f-4c69-4493-a2af-01a61087282d/image",
       "recipient": {
         "type": "email",
+        "hashed": false,
         "identity": "wiggins@concentricsky.com"
       },
       "verify": {
