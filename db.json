@@ -42,6 +42,25 @@
         "Social Studies",
         "Problem Solving"
       ]
+    },
+    {
+      "@context": "https://w3id.org/openbadges/v2",
+      "id": "http://localhost:3000/badges/geolocated-badge",
+      "type": "BadgeClass",
+      "name": "GeoLocated Badge",
+      "description": "You can find this badge on the web and on a map",
+      "image": "https://api.badgr.io/public/badges/bill-of-rights/image",
+      "criteria": "http://example.org/somewhere",
+      "issuer": "http://localhost:3000/issuers/first",
+      "schema:location": {
+        "@context": "https://w3id.org/openbadges/extensions/geoCoordinatesExtension/context.json",
+        "type": ["Extension", "extensions:GeoCoordinates"],
+        "description": "That place in the woods where we built the fort",
+        "geo": {
+          "latitude": 44.580900,
+          "longitude": -123.301815
+        }
+      }
     }
   ],
   "assertions": [
@@ -66,6 +85,22 @@
       ],
       "narrative": "He really billed those rights!",
       "expires": "2222-12-31T23:59:59+00:00"
+    },
+    {
+      "@context": "https://w3id.org/openbadges/v2",
+      "id": "http://localhost:3000/assertions/geolocated-1",
+      "type": "Assertion",
+      "recipient": {
+        "type": "email",
+        "hashed": false,
+        "identity": "wiggins@concentricsky.com"
+      },
+      "badge": "http://localhost:3000/badges/geolocated-badge",
+      "verify": {
+        "type": "hosted"
+      },
+      "issuedOn": "2016-10-27T17:48:34+00:01",
+      "narrative": "This Assertion's BadgeClass has an extension!"
     }
   ]
 }
