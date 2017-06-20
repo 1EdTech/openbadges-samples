@@ -1,0 +1,12 @@
+{
+  "name": "badge-json-server",
+  "version": "1.0.0",
+  "scripts": {
+    "server": "json-server --watch db.json --routes routes.json"
+  },
+  "dependencies": {
+    "json-server": "^0.10.1"
+  },
+  "devDependencies": {
+  }
+}

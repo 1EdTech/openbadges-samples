@@ -1,0 +1,46 @@
+{
+  "issuers": [
+    {  
+       "@context":"https://w3id.org/openbadges/v1",
+       "description":"A test issuer for a hypothetical high school civics course",
+       "url":"http://concentricsky.com",
+       "email":"ottonomy+demo@gmail.com",
+       "type":"Issuer",
+       "id":"http://localhost:3000/issuers/first",
+       "name":"First! American Civics 2016",
+       "image":"https://api.badgr.io/public/issuers/american-civics-2016/image"
+    }
+  ],
+  "badges": [
+    {
+      "description": "Description of Bill",
+      "image": "https://api.badgr.io/public/badges/bill-of-rights/image",
+      "name": "Hosted Bill of Rights",
+      "criteria": "https://api.badgr.io/public/badges/bill-of-rights/criteria",
+      "@context": "https://w3id.org/openbadges/v1",
+      "type": "BadgeClass",
+      "id": "http://localhost:3000/badges/bill-of-rights",
+      "issuer": "http://localhost:3000/issuers/first"
+    }
+  ],
+  "assertions": [
+    {
+      "issuedOn": "2016-10-27T17:48:34+00:00",
+      "revoked": false,
+      "type": "Assertion",
+      "image": "https://api.badgr.io/public/assertions/e7fb016f-4c69-4493-a2af-01a61087282d/image",
+      "recipient": {
+        "type": "email",
+        "identity": "wiggins@concentricsky.com"
+      },
+      "verify": {
+        "url": "http://localhost:3000/assertions/wiggins-bill-of-rights",
+        "type": "hosted"
+      },
+      "@context": "https://w3id.org/openbadges/v1",
+      "badge": "http://localhost:3000/badges/bill-of-rights",
+      "id": "http://localhost:3000/assertions/wiggins-bill-of-rights",
+      "uid": "e7fb016f-4c69-4493-a2af-01a61087282d"
+    }
+  ]
+}
