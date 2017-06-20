@@ -1,0 +1,12 @@
+Usage:
+
+edit db.json to reflect the objects you want to serve
+
+Note the "id" properties are self referential. routes.json deals with this
+
+npm install
+npm run server
+
+
+Caveats:
+  assumes it runs on localhost:3000 -- if thats not badge objects may not validate properly
