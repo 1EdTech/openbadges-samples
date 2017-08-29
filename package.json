@@ -1,5 +1,5 @@
 {
-  "name": "badge-json-server",
+  "name": "openbadges-samples",
   "version": "1.0.0",
   "scripts": {
     "server": "json-server --watch db.json --routes routes.json"
