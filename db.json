@@ -101,6 +101,32 @@
       },
       "issuedOn": "2016-10-27T17:48:34+00:01",
       "narrative": "This Assertion's BadgeClass has an extension!"
+    },
+    {
+      "@context": "https://w3id.org/openbadges/v2",
+      "id": "http://localhost:3000/assertions/bespoke-badge-1",
+      "type": "Assertion",
+      "recipient": {
+        "type": "email",
+        "hashed": false,
+        "identity": "wiggins@concentricsky.com"
+      },
+      "badge": {
+        "id": "urn:uuid:b0fec2d5-4e04-4fc8-bf8b-0d16be5d6972",
+        "type": "BadgeClass",
+        "name": "Bespoke Badge",
+        "description": "A badge made just for you.",
+        "criteria": {
+          "narrative": "Just be yourself."
+        },
+        "image": "https://api.badgr.io/public/badges/bill-of-rights/image",
+        "issuer": "http://localhost:3000/issuers/first"
+      },
+      "verify": {
+        "type": "hosted"
+      },
+      "issuedOn": "2016-10-27T17:48:34+00:01",
+      "narrative": "This Assertion has an embedded BadgeClass that uses urn:uuid!"
     }
   ]
 }
