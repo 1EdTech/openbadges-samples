@@ -1,0 +1,5 @@
+{
+    "/issuers/:slug": "http://localhost:3000/issuers/http%3A%2F%2Flocalhost%3A3000%2Fissuers%2F:slug",
+    "/badges/:slug": "http://localhost:3000/badges/http%3A%2F%2Flocalhost%3A3000%2Fbadges%2F:slug",
+    "/assertions/:slug": "http://localhost:3000/assertions/http%3A%2F%2Flocalhost%3A3000%2Fassertions%2F:slug"
+}

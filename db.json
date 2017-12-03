@@ -1,0 +1,132 @@
+{
+  "issuers": [
+    {  
+       "@context":"https://w3id.org/openbadges/v2",
+       "id":"http://localhost:3000/issuers/first",
+       "type":"Issuer",
+       "name":"First! American Civics 2016",
+       "url":"http://concentricsky.com",
+       "telephone": "+15415551212",
+       "description":"A test issuer for a hypothetical high school civics course",
+       "image":"https://api.badgr.io/public/issuers/american-civics-2016/image",
+       "email":"ottonomy+demo@gmail.com"
+    }
+  ],
+  "badges": [
+    {
+      "@context": "https://w3id.org/openbadges/v2",
+      "id": "http://localhost:3000/badges/bill-of-rights",
+      "type": "BadgeClass",
+      "name": "Hosted Bill of Rights",
+      "description": "Description of Bill",
+      "image": "https://api.badgr.io/public/badges/bill-of-rights/image",
+      "criteria": { 
+        "id": "https://api.badgr.io/public/badges/bill-of-rights/criteria",
+        "narrative": "some narrative"
+      },
+      "issuer": "http://localhost:3000/issuers/first",
+      "alignment": [
+        { "targetName": "CCSS.ELA-Literacy.RST.11-12.3",
+          "targetUrl": "http://www.corestandards.org/ELA-Literacy/RST/11-12/3",
+          "targetDescription": "Follow precisely a complex multistep procedure when carrying out experiments, taking measurements, or performing technical tasks; analyze the specific results based on explanations in the text.",
+          "targetCode": "CCSS.ELA-Literacy.RST.11-12.3"
+        },
+        { "targetName": "Problem-Solving",
+          "targetUrl": "https://learning.mozilla.org/en-US/web-literacy/skills#problem-solving",
+          "targetDescription": "Using research, analysis, rapid prototyping, and feedback to formulate a problem and develop, test, and refine the solution/plan.",
+          "targetFramework": "Mozilla 21st Century Skills"
+        }
+      ],
+      "tags": [
+        "Bill of Rights",
+        "Social Studies",
+        "Problem Solving"
+      ]
+    },
+    {
+      "@context": "https://w3id.org/openbadges/v2",
+      "id": "http://localhost:3000/badges/geolocated-badge",
+      "type": "BadgeClass",
+      "name": "GeoLocated Badge",
+      "description": "You can find this badge on the web and on a map",
+      "image": "https://api.badgr.io/public/badges/bill-of-rights/image",
+      "criteria": "http://example.org/somewhere",
+      "issuer": "http://localhost:3000/issuers/first",
+      "schema:location": {
+        "@context": "https://w3id.org/openbadges/extensions/geoCoordinatesExtension/context.json",
+        "type": ["Extension", "extensions:GeoCoordinates"],
+        "description": "That place in the woods where we built the fort",
+        "geo": {
+          "latitude": 44.580900,
+          "longitude": -123.301815
+        }
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "@context": "https://w3id.org/openbadges/v2",
+      "id": "http://localhost:3000/assertions/wiggins-bill-of-rights",
+      "type": "Assertion",
+      "recipient": {
+        "type": "email",
+        "hashed": false,
+        "identity": "wiggins@concentricsky.com"
+      },
+      "badge": "http://localhost:3000/badges/bill-of-rights",
+      "verify": {
+        "url": "http://localhost:3000/assertions/wiggins-bill-of-rights",
+        "type": "hosted"
+      },
+      "issuedOn": "2016-10-27T17:48:34+00:00",
+      "image": "https://api.badgr.io/public/assertions/e7fb016f-4c69-4493-a2af-01a61087282d/image",
+      "evidence": [
+
+      ],
+      "narrative": "He really billed those rights!",
+      "expires": "2222-12-31T23:59:59+00:00"
+    },
+    {
+      "@context": "https://w3id.org/openbadges/v2",
+      "id": "http://localhost:3000/assertions/geolocated-1",
+      "type": "Assertion",
+      "recipient": {
+        "type": "email",
+        "hashed": false,
+        "identity": "wiggins@concentricsky.com"
+      },
+      "badge": "http://localhost:3000/badges/geolocated-badge",
+      "verify": {
+        "type": "hosted"
+      },
+      "issuedOn": "2016-10-27T17:48:34+00:01",
+      "narrative": "This Assertion's BadgeClass has an extension!"
+    },
+    {
+      "@context": "https://w3id.org/openbadges/v2",
+      "id": "http://localhost:3000/assertions/bespoke-badge-1",
+      "type": "Assertion",
+      "recipient": {
+        "type": "email",
+        "hashed": false,
+        "identity": "wiggins@concentricsky.com"
+      },
+      "badge": {
+        "id": "urn:uuid:b0fec2d5-4e04-4fc8-bf8b-0d16be5d6972",
+        "type": "BadgeClass",
+        "name": "Bespoke Badge",
+        "description": "A badge made just for you.",
+        "criteria": {
+          "narrative": "Just be yourself."
+        },
+        "image": "https://api.badgr.io/public/badges/bill-of-rights/image",
+        "issuer": "http://localhost:3000/issuers/first"
+      },
+      "verify": {
+        "type": "hosted"
+      },
+      "issuedOn": "2016-10-27T17:48:34+00:01",
+      "narrative": "This Assertion has an embedded BadgeClass that uses urn:uuid!"
+    }
+  ]
+}
